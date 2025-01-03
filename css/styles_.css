@@ -1,0 +1,205 @@
+k/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    background-color: #1e1e1e; /* Темно-серый фон */
+    color: #d1d1d1; /* Светло-серый текст */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Стили навигации */
+header {
+    background-color: #262626;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #4d79ff; /* Акцентный цвет */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4d79ff; /* Смена цвета при наведении */
+}
+
+/* Стили для бургер-меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #d1d1d1;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Секция Hero */
+.hero {
+    height: 50vh;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #547a78; /*#4d79ff*/
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #41907a; /*#3d6dcc*/
+}
+
+/* О нас */
+.about, .technologies, .ai, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2, .technologies h2, .ai h2, .contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #547a78; /*#4d79ff*/
+}
+
+.about p, .ai p, .contact p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Технологии */
+.tech-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tech-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.tech-item:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+/* Секции ИИ и Контакты */
+.ai, .contact {
+    background-color: #2a2a2a;
+}
+
+/* Footer */
+footer {
+    background-color: #262626;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+
+.logo {
+    height: 3rem;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .logo {
+        height: 2rem;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: start;
+	margin-left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .tech-item {
+        width: 100%;
+    }
+}
